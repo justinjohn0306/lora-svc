@@ -12,9 +12,9 @@ With lora, maybe clone a singer just need 10 stence after 10 minutes train. Each
 
 Model **which contains [56 singers](https://github.com/PlayVoice/lora-svc/tree/main/config/singers) of 50 hours singing data** is training~~~~
 
-You can down preview model **uni_svc_opensinger_0275.pth** at release page.
+You can down preview model **uni_svc_opensinger_0415.pth** at release page.
 
-https://user-images.githubusercontent.com/16432329/226079413-9fe7a154-4cc9-409c-b15a-124e8aef5934.mp4
+https://user-images.githubusercontent.com/16432329/227782805-8a45e99a-8905-4ec8-ac20-b75a45cfbc97.mp4
 
 Uni-SVC for **baker** (release state v0.3): branch https://github.com/PlayVoice/Uni-SVC/tree/uni-svc-baker, experiment on pure speech
 
@@ -56,7 +56,7 @@ change sample rate of waves, and put waves to ./data_svc/waves
 
 > python svc_preprocess_ppg.py -w ./data_svc/waves -p ./data_svc/whisper
 
-> python svc_preprocess_ids.py -w ./data_svc/waves -p ./data_svc/ids
+> **TODO** python svc_preprocess_ids.py -w ./data_svc/waves -p ./data_svc/ids
 
 > python svc_preprocess_f0.py
 
@@ -107,7 +107,7 @@ export clean model
 
 you can download model for release page, after model release
 
-> python svc_inference.py --config config/default_c32.yaml --model uni_svc_opensinger_0275.pth --spk ./config/singers/singer0001.npy --wave uni_svc_test.wav
+> python svc_inference.py --config config/default_c32.yaml --model uni_svc_opensinger_0415.pth --spk ./config/singers/singer0001.npy --wave uni_svc_test.wav
 
 ## demos
 #### uni-svc on baker with pure speech, trained 340 epoch of 10k steps
@@ -175,6 +175,3 @@ If you adopt the code or idea of this project, please list it in your project, w
 如果你采用了本项目的代码或创意，请在你的项目中列出，这是开源精神得以延续的基本准则。
 
 このプロジェクトのコードやアイデアを採用した場合は、オープンソースの精神が続く基本的なガイドラインであるプロジェクトにリストしてください。
-
-# VI-SVC
-VI-SVC was dropped to https://github.com/PlayVoice/VI-SVC/tree/vi_svc
